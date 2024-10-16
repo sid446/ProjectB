@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import back from '../assets/back.png';
-import line from '../assets/line.png';
-import cup from '../assets/cup.png';
-import night from '../assets/night.png'
-import sun from '../assets/sun.png'
+import { back,line,cup,night,sun } from '../util';
 
 function SignIn() {
   const [active,setActive]=useState(false)
@@ -15,26 +11,17 @@ function SignIn() {
   }
   return (
     <>
-      <div
-        className="w-[100vw] h-[100vh] flex"
-        style={{
-          backgroundImage: `url(${back})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      <div className="w-[100vw] h-[100vh] flex" style={{backgroundImage: `url(${back})`,backgroundSize: 'cover',backgroundPosition: 'center', }}>
         <div className='w-[40vw] h-[100vh] p-5 '>
          
           <div className='w-[6rem] relative h-[2rem] bg-[#D9D9D9] bg-opacity-40  rounded-full 'onClick={onClickHandle}>
-            <div className={`w-[3rem] py-1 px-3 absolute left-0 top-0 bg-opacity-30  h-full   rounded-full transition-transform duration-300 ${active?'bg-white bg-opacity-50':'bg-[#D9D9D9]'} ease-in-out ${active?'translate-x-[3rem]':''}`}>
-               <img className='w-[1.5rem] ' src={active?sun:night} alt="" />
-            </div>
+                  <div className={`w-[3rem] py-1 px-3 absolute left-0 top-0 bg-opacity-30  h-full   rounded-full transition-transform duration-300 ${active?'bg-white bg-opacity-50':'bg-[#D9D9D9]'} ease-in-out ${active?'translate-x-[3rem]':''}`}>
+                    <img className='w-[1.5rem] ' src={active?sun:night} alt="" />
+                  </div>
+                  <div className=''>
+
+                  </div>
           </div>
-          
-          
-
-
-
         </div>
 
 
